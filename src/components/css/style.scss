@@ -1,0 +1,1073 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Manrope", sans-serif;
+}
+
+$iphone8: 376px;
+
+$CBlack: #353a43;
+
+.container {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cardPage {
+  background-color: #f6f6f6;
+
+  .header {
+    background: #fff;
+
+    .header__top {
+      display: flex;
+      justify-content: flex-end;
+      padding: 35px 0 40px 0;
+
+      ul {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+
+        .topNav {
+          font-size: 14px;
+          font-weight: 500;
+          color: #949ba5;
+          cursor: pointer;
+
+          &:first-child {
+            display: flex;
+            align-items: center;
+
+            img {
+              padding-left: 0.3em;
+            }
+          }
+        }
+      }
+    }
+
+    .header__mid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .mid__logo {
+        padding-right: 110px;
+
+        img {
+          cursor: pointer;
+        }
+      }
+
+      .mid__burgerMenu {
+        cursor: pointer;
+      }
+
+      .mid__search {
+        display: flex;
+        align-items: center;
+
+        background-color: #f6f6f6;
+        padding: 0 0.8em;
+        border-radius: 14px;
+        max-width: 388px;
+        width: 100%;
+        height: 45px;
+
+        img {
+          padding-right: 0.5em;
+        }
+
+        input {
+          background: none;
+          border: none;
+          display: block;
+          height: 100%;
+          width: 100%;
+          outline: none;
+        }
+      }
+
+      .midNav {
+        display: flex;
+        align-items: center;
+
+        font-weight: 600;
+        font-size: 14px;
+        color: $CBlack;
+
+        cursor: pointer;
+
+        img {
+          padding-right: 0.5em;
+        }
+      }
+    }
+
+    .header__bottom {
+      ul {
+        display: flex;
+        justify-content: space-between;
+
+        width: 90%;
+        padding: 40px 0 35px 0;
+
+        li {
+          cursor: pointer;
+
+          font-size: 16px;
+          font-weight: 500;
+          color: $CBlack;
+
+          &:nth-child(-n + 3) {
+            display: flex;
+            align-items: center;
+
+            img {
+              padding-left: 0.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .currentPath {
+    padding: 30px 0 25px 0;
+
+    p {
+      font-size: 12px;
+      font-weight: 500;
+      color: #949ba5;
+
+      span {
+        color: $CBlack;
+      }
+    }
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 14px;
+    padding: 1em;
+
+    .updated {
+      text-align: end;
+
+      font-size: 12px;
+      font-weight: 400;
+      color: #6f747c;
+    }
+
+    .card__detail {
+      display: flex;
+    }
+
+    .cardImg {
+      width: 40%;
+      background: #f6f6f6;
+      border-radius: 14px;
+      padding: 7em 2em 1em 2em;
+
+      display: grid;
+      grid-template-areas:
+        "cardImg__btn_left cardImg_img cardImg__btn_right"
+        ". . cardImg__icon_favorite";
+      align-items: center;
+      justify-items: center;
+
+      .cardImg__btn_right {
+        img {
+          transform: rotate(180deg);
+        }
+      }
+
+      .cardImg__btn {
+        cursor: pointer;
+      }
+
+      .cardImg__icon_favorite {
+        margin-top: 5em;
+        grid-column-start: 3;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .cardInformation {
+    width: 60%;
+    padding: 0 120px;
+
+    .cardInformation__title {
+      font-weight: 700;
+      font-size: 36px;
+      color: $CBlack;
+    }
+
+    .cardInformation__manufacturerAndInformation {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 1em;
+
+      .cardInformation__manufacturer {
+        font-size: 16px;
+        font-weight: 600;
+        color: $CBlack;
+      }
+
+      .cardInformation__information {
+        display: flex;
+        align-items: flex-start;
+        font-weight: 400;
+        font-size: 14px;
+        color: #949ba5;
+        cursor: pointer;
+
+        img {
+          padding: 0.3em 0.3em 0 0;
+        }
+      }
+    }
+
+    .cardInformation__price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 55%;
+
+      .cardInformation__discountedPrice {
+        font-weight: 800;
+        font-size: 30px;
+        color: $CBlack;
+      }
+
+      .cardInformation__priceWithoutDiscount {
+        font-weight: 700;
+        font-size: 20px;
+        color: #949ba5;
+        text-decoration: line-through;
+      }
+
+      .cardInformation__bonus {
+        font-weight: 600;
+        font-size: 14px;
+        color: #949ba5;
+      }
+    }
+
+    .cardInformation__economy {
+      font-weight: 600;
+      font-size: 15px;
+      padding-top: 30px;
+    }
+
+    .cardInformation__rowImg {
+      display: flex;
+      justify-content: space-between;
+      padding: 38px 0;
+
+      img {
+        width: 89px;
+        height: 89px;
+        cursor: pointer;
+      }
+    }
+
+    .cardInformation__sizes {
+      font-size: 16px;
+      font-weight: 500;
+      color: #949ba5;
+
+      span {
+        font-weight: 700;
+        color: #353a43;
+      }
+    }
+
+    .cardInformation__dimensionalGrid {
+      font-weight: 600;
+      font-size: 16px;
+      color: #4690ff;
+
+      padding-top: 8px;
+    }
+
+    .cardInformation__colorTShirt {
+      display: flex;
+      justify-content: space-between;
+      width: 40%;
+      padding: 38px 0;
+
+      .colors {
+        width: 18px;
+        height: 18px;
+        border-radius: 100%;
+        cursor: pointer;
+      }
+
+      .colorTShirt_red {
+        background: #f71d25;
+      }
+
+      .colorTShirt_blue {
+        background: #21c0fc;
+      }
+
+      .colorTShirt_white {
+        background: #dad9d9;
+      }
+
+      .colorTShirt_black {
+        background: #000;
+      }
+
+      .colorTShirt_grey {
+        background: #bebebe;
+      }
+
+      .colorTShirt_pink {
+        background: #c7a3c7;
+      }
+
+      .colorTShirt_brown {
+        background: #e2cba7;
+      }
+    }
+
+    .cardInformation__btn {
+      font-weight: 600;
+      font-size: 16px;
+      color: #fff;
+      text-align: center;
+
+      background-color: #2c7bf1;
+      border-radius: 10px;
+      padding: 1em;
+      width: 50%;
+      cursor: pointer;
+    }
+  }
+
+  .aboutTheProduct {
+    background: #ffffff;
+    border-radius: 14px;
+
+    display: flex;
+
+    margin-top: 40px;
+    padding: 2em;
+
+    .aboutTheProduct__colLeft {
+      width: 50%;
+
+      .colLeft__title {
+        font-weight: 800;
+        font-size: 30px;
+        text-transform: uppercase;
+      }
+
+      .colLeft__colInformation {
+        display: flex;
+        ul {
+          width: 50%;
+          display: grid;
+          grid-template-rows: repeat(12, 70px);
+          align-items: center;
+
+          li {
+            font-weight: 500;
+            font-size: 14px;
+            color: #949ba5;
+            line-height: 26px;
+
+            p {
+              font-weight: 700;
+              color: #353a43;
+            }
+          }
+        }
+      }
+    }
+
+    .aboutTheProduct__colRight {
+      width: 50%;
+
+      .colRight__description {
+        font-weight: 800;
+        font-size: 30px;
+
+        p {
+          font-weight: 500;
+          font-size: 15px;
+          margin-bottom: 77px;
+          padding-top: 10px;
+        }
+      }
+
+      .colRight__refund {
+        font-weight: 800;
+        font-size: 30px;
+
+        p {
+          font-weight: 500;
+          font-size: 15px;
+          margin-bottom: 60px;
+          padding-top: 10px;
+        }
+      }
+
+      .colRight__conditions {
+        font-weight: 600;
+        font-size: 16px;
+
+        padding: 0 0 40px 1em;
+      }
+
+      .colRight__manual {
+        font-weight: 600;
+        font-size: 16px;
+
+        padding: 0 0 40px 1em;
+      }
+    }
+  }
+
+  .similarProducts {
+    background: #ffffff;
+    border-radius: 14px;
+    margin-top: 40px;
+    padding: 1em;
+
+    .similarProducts__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .similarProducts__title {
+        width: 70%;
+
+        font-weight: 800;
+        font-size: 26px;
+      }
+
+      .similarProducts__btn {
+        img {
+          cursor: pointer;
+          &:last-child {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .similarProducts__dropDown {
+        display: flex;
+        align-items: center;
+        background: #f6f6f6;
+        border-radius: 10px;
+        padding: 0.5em 1em;
+
+        font-weight: 600;
+        font-size: 16px;
+
+        cursor: pointer;
+
+        img {
+          padding-left: 0.4em;
+        }
+      }
+    }
+
+    .similarProducts__rowCards {
+      display: flex;
+      justify-content: space-between;
+
+      padding-top: 2em;
+
+      .similarProducts__card {
+        .card__img {
+          position: relative;
+          img {
+            &:last-child {
+              position: absolute;
+              bottom: 1em;
+              right: 1em;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .card__name {
+          font-weight: 700;
+          font-size: 16px;
+
+          padding-left: 0.5em;
+        }
+
+        .card__manufacturer {
+          font-weight: 600;
+          font-size: 14px;
+
+          color: #949ba5;
+
+          padding-left: 0.5em;
+        }
+
+        .card__price {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-left: 0.5em;
+
+          .card__discountedPrice {
+            font-weight: 800;
+            font-size: 20px;
+          }
+
+          .card__priceWithoutDiscount {
+            font-weight: 700;
+            font-size: 14px;
+            color: #949ba5;
+            text-decoration: line-through;
+            padding: 0.5em 0;
+          }
+
+          .card__discount {
+            width: 30%;
+            text-align: end;
+            font-weight: 800;
+            font-size: 16px;
+            color: #ff4b77;
+          }
+        }
+      }
+    }
+  }
+
+  .haveYouWatched {
+    background: #ffffff;
+    border-radius: 14px;
+
+    margin-top: 40px;
+    padding: 1em;
+
+    .haveYouWatched__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .haveYouWatched__title {
+        width: 70%;
+
+        font-weight: 800;
+        font-size: 26px;
+      }
+
+      .haveYouWatched__btn {
+        img {
+          cursor: pointer;
+          &:last-child {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .haveYouWatched__dropDown {
+        display: flex;
+        align-items: center;
+        background: #f6f6f6;
+        border-radius: 10px;
+        padding: 0.5em 1em;
+
+        font-weight: 600;
+        font-size: 16px;
+
+        cursor: pointer;
+
+        img {
+          padding-left: 0.4em;
+        }
+      }
+    }
+
+    .haveYouWatched__rowCards {
+      display: flex;
+      justify-content: space-between;
+
+      padding-top: 2em;
+
+      .haveYouWatched__card {
+        .card__img {
+          position: relative;
+          img {
+            &:last-child {
+              position: absolute;
+              bottom: 1em;
+              right: 1em;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .card__name {
+          font-weight: 700;
+          font-size: 16px;
+
+          padding-left: 0.5em;
+        }
+
+        .card__manufacturer {
+          font-weight: 600;
+          font-size: 14px;
+
+          color: #949ba5;
+
+          padding-left: 0.5em;
+        }
+
+        .card__price {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-left: 0.5em;
+
+          .card__discountedPrice {
+            font-weight: 800;
+            font-size: 20px;
+          }
+
+          .card__priceWithoutDiscount {
+            font-weight: 700;
+            font-size: 14px;
+            color: #949ba5;
+            text-decoration: line-through;
+            padding: 0.5em 0;
+          }
+
+          .card__discount {
+            width: 30%;
+            text-align: end;
+            font-weight: 800;
+            font-size: 16px;
+            color: #ff4b77;
+          }
+        }
+      }
+    }
+  }
+
+  .TShirtRating {
+    background: #ffffff;
+    border-radius: 14px;
+
+    padding: 1em;
+    margin-top: 40px;
+
+    .TShirtRating__title {
+      font-weight: 800;
+      font-size: 26px;
+    }
+
+    .TShirtRating__row {
+      display: flex;
+
+      .TShirtRating__colLeft {
+        background: #f6f6f6;
+        border-radius: 14px;
+        width: 60%;
+        padding: 2em;
+        margin-top: 1em;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .colLeft__rating {
+          .rating__rating {
+            font-weight: 800;
+            font-size: 50px;
+          }
+
+          .rating__stars {
+            display: flex;
+            justify-content: space-between;
+
+            padding: 1em 0 2em 0;
+          }
+
+          .rating__reviews {
+            font-weight: 600;
+            font-size: 14px;
+            color: #949ba5;
+          }
+        }
+
+        .colLeft__percentages {
+          .percentages__scale {
+            font-weight: 600;
+            font-size: 16px;
+            color: #6f747c;
+            margin-bottom: 1em;
+
+            display: flex;
+            align-items: center;
+
+            .scale_grey {
+              width: 20em;
+              height: 3px;
+              background: #949ba5;
+              margin-right: 1em;
+
+              .scale_orange {
+                height: 3px;
+                background: #ff9939;
+              }
+            }
+          }
+        }
+      }
+
+      .TShirtRating__colRight {
+        width: 40%;
+
+        padding-left: 1em;
+
+        .colRight__Accordance {
+          padding-top: 1em;
+          font-weight: 600;
+          font-size: 18px;
+        }
+
+        .colRight__rowPercentages {
+          display: grid;
+          grid-template-areas: "malomerite respond" "more .";
+          align-items: flex-end;
+          grid-template-rows: 85px 100px;
+
+          .colRight__percentages {
+            display: flex;
+            align-items: center;
+
+            .percentages__circrle {
+              position: relative;
+              width: 75px;
+              height: 73px;
+
+              svg {
+                width: 75px;
+                height: 73px;
+
+                position: relative;
+                transform: rotate(270deg);
+                circle {
+                  width: 66px;
+                  height: 66px;
+                  fill: none;
+                  stroke-width: 3;
+                  stroke: #000;
+                  transform: translate(5px, 5px);
+                  stroke-dasharray: 207;
+                  stroke-dashoffset: 414;
+
+                  &:first-child {
+                    stroke-dashoffset: 0;
+
+                    stroke: #eeeded;
+                  }
+
+                  &:last-child {
+                    stroke: #ff9939;
+                  }
+                }
+              }
+
+              .percentages__number {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-weight: 600;
+                font-size: 16px;
+                color: #6f747c;
+              }
+            }
+
+            .percentages__text {
+              font-weight: 600;
+              font-size: 16px;
+              padding-left: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .reviews {
+    background: #ffffff;
+    border-radius: 14px;
+    margin-top: 40px;
+    padding: 1em;
+
+    .reviews__textTitle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding-bottom: 3em;
+
+      border-bottom: 1px solid #cacfd6;
+
+      .title {
+        font-weight: 800;
+        font-size: 26px;
+
+        span {
+          font-weight: 600;
+          font-size: 18px;
+          color: #949ba5;
+        }
+      }
+
+      .text {
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+
+    .reviews__btn_write {
+      color: #fff;
+      font-weight: 600;
+      font-size: 16px;
+      text-align: center;
+
+      background: #2c7bf1;
+      padding: 0.8em 0;
+      border-radius: 10px;
+      width: 12em;
+      cursor: pointer;
+      margin-top: 2em;
+    }
+
+    .reviews__user {
+      display: flex;
+      padding: 2em 0 1em 0;
+
+      border-bottom: 1px solid #cacfd6;
+
+      .user__information {
+        padding: 0.5em 0 0 1.5em;
+        width: 100%;
+
+        .user__name {
+          display: flex;
+          align-items: center;
+
+          p {
+            font-weight: 800;
+            font-size: 18px;
+
+            &::after {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 1px;
+              background: #353a43;
+            }
+          }
+
+          span {
+            font-weight: 600;
+            font-size: 14px;
+            color: #949ba5;
+            padding-left: 1em;
+          }
+        }
+
+        .user__rating {
+          width: 10%;
+          padding: 0.5em 0;
+
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .user__comments {
+          font-weight: 400;
+          font-size: 14px;
+        }
+
+        .user__btn {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+
+          .btn__like {
+            display: flex;
+            align-items: flex-start;
+
+            img {
+              cursor: pointer;
+            }
+            span {
+              font-weight: 600;
+              font-size: 16px;
+              color: #949ba5;
+
+              padding-left: 0.3em;
+            }
+          }
+
+          .btn__dislike {
+            display: flex;
+            align-items: flex-end;
+            padding: 4px 0 0 0.8em;
+
+            img {
+              cursor: pointer;
+            }
+            span {
+              font-weight: 600;
+              font-size: 16px;
+              color: #949ba5;
+
+              padding-left: 0.3em;
+            }
+          }
+        }
+      }
+    }
+
+    .reviews__btnShowMore {
+      display: flex;
+      justify-content: center;
+
+      padding: 2em 0;
+      cursor: pointer;
+      p {
+        font-weight: 600;
+        font-size: 15px;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #353a43;
+        }
+      }
+    }
+  }
+
+  .footer {
+    background: #ffffff;
+    border-top: 2px dashed rgba(106, 125, 154, 0.6);
+    position: relative;
+
+    margin-top: 80px;
+    padding: 5em 0;
+
+    .scissors {
+      position: absolute;
+      top: -32px;
+      right: 100px;
+    }
+
+    .footer__content {
+      display: flex;
+      justify-content: space-between;
+      height: 500px;
+
+      .content__col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        ul {
+          li {
+            font-weight: 500;
+            font-size: 16px;
+            color: #949ba5;
+            line-height: 2em;
+
+            &:first-child {
+              font-weight: 600;
+              font-size: 18px;
+              color: #353a43;
+            }
+          }
+        }
+
+        ol {
+          li {
+            font-weight: 500;
+            font-size: 16px;
+            color: #949ba5;
+            line-height: 1.5em;
+          }
+        }
+
+        .socialNetwork {
+          display: grid;
+          justify-items: center;
+          align-items: center;
+          grid-template-rows: repeat(2, 3em) 4em;
+          grid-template-columns: repeat(3, 3em);
+          grid-template-areas:
+            "faceBook isntagram ok "
+            "twitter youtube wk "
+            "visa . masterCard";
+
+          .masterCard {
+            grid-column-start: 3;
+          }
+
+          img {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: $iphone8) {
+    .header {
+      .container {
+        .header__top {
+          display: none;
+        }
+
+        .header__mid {
+          .mid__burgerMenu,
+          .midNav {
+            display: none;
+          }
+        }
+
+        .header__bottom {
+          display: none;
+        }
+      }
+    }
+
+    .currentPath {
+      display: none;
+    }
+
+    .container {
+      .card {
+        .card__detail {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

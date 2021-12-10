@@ -1,0 +1,1190 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  font-family: "Manrope", sans-serif;
+}
+
+.container {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cardPage {
+  background-color: #f6f6f6;
+}
+
+.cardPage .header {
+  background: #fff;
+}
+
+.cardPage .header .header__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 35px 0 40px 0;
+}
+
+.cardPage .header .header__top ul {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cardPage .header .header__top ul .topNav {
+  font-size: 14px;
+  font-weight: 500;
+  color: #949ba5;
+  cursor: pointer;
+}
+
+.cardPage .header .header__top ul .topNav:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardPage .header .header__top ul .topNav:first-child img {
+  padding-left: 0.3em;
+}
+
+.cardPage .header .header__mid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardPage .header .header__mid .mid__logo {
+  padding-right: 110px;
+}
+
+.cardPage .header .header__mid .mid__logo img {
+  cursor: pointer;
+}
+
+.cardPage .header .header__mid .mid__burgerMenu {
+  cursor: pointer;
+}
+
+.cardPage .header .header__mid .mid__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f6f6f6;
+  padding: 0 0.8em;
+  border-radius: 14px;
+  max-width: 388px;
+  width: 100%;
+  height: 45px;
+}
+
+.cardPage .header .header__mid .mid__search img {
+  padding-right: 0.5em;
+}
+
+.cardPage .header .header__mid .mid__search input {
+  background: none;
+  border: none;
+  display: block;
+  height: 100%;
+  width: 100%;
+  outline: none;
+}
+
+.cardPage .header .header__mid .midNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: #353a43;
+  cursor: pointer;
+}
+
+.cardPage .header .header__mid .midNav img {
+  padding-right: 0.5em;
+}
+
+.cardPage .header .header__bottom ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  padding: 40px 0 35px 0;
+}
+
+.cardPage .header .header__bottom ul li {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #353a43;
+}
+
+.cardPage .header .header__bottom ul li:nth-child(-n + 3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardPage .header .header__bottom ul li:nth-child(-n + 3) img {
+  padding-left: 0.5em;
+}
+
+.cardPage .currentPath {
+  padding: 30px 0 25px 0;
+}
+
+.cardPage .currentPath p {
+  font-size: 12px;
+  font-weight: 500;
+  color: #949ba5;
+}
+
+.cardPage .currentPath p span {
+  color: #353a43;
+}
+
+.cardPage .card {
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 1em;
+}
+
+.cardPage .card .updated {
+  text-align: end;
+  font-size: 12px;
+  font-weight: 400;
+  color: #6f747c;
+}
+
+.cardPage .card .card__detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cardPage .card .cardImg {
+  width: 40%;
+  background: #f6f6f6;
+  border-radius: 14px;
+  padding: 7em 2em 1em 2em;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "cardImg__btn_left cardImg_img cardImg__btn_right" ". . cardImg__icon_favorite";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.cardPage .card .cardImg .cardImg__btn_right img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.cardPage .card .cardImg .cardImg__btn {
+  cursor: pointer;
+}
+
+.cardPage .card .cardImg .cardImg__icon_favorite {
+  margin-top: 5em;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  cursor: pointer;
+}
+
+.cardPage .cardInformation {
+  width: 60%;
+  padding: 0 120px;
+}
+
+.cardPage .cardInformation .cardInformation__title {
+  font-weight: 700;
+  font-size: 36px;
+  color: #353a43;
+}
+
+.cardPage .cardInformation .cardInformation__manufacturerAndInformation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 1em;
+}
+
+.cardPage .cardInformation .cardInformation__manufacturerAndInformation .cardInformation__manufacturer {
+  font-size: 16px;
+  font-weight: 600;
+  color: #353a43;
+}
+
+.cardPage .cardInformation .cardInformation__manufacturerAndInformation .cardInformation__information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-weight: 400;
+  font-size: 14px;
+  color: #949ba5;
+  cursor: pointer;
+}
+
+.cardPage .cardInformation .cardInformation__manufacturerAndInformation .cardInformation__information img {
+  padding: 0.3em 0.3em 0 0;
+}
+
+.cardPage .cardInformation .cardInformation__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 55%;
+}
+
+.cardPage .cardInformation .cardInformation__price .cardInformation__discountedPrice {
+  font-weight: 800;
+  font-size: 30px;
+  color: #353a43;
+}
+
+.cardPage .cardInformation .cardInformation__price .cardInformation__priceWithoutDiscount {
+  font-weight: 700;
+  font-size: 20px;
+  color: #949ba5;
+  text-decoration: line-through;
+}
+
+.cardPage .cardInformation .cardInformation__price .cardInformation__bonus {
+  font-weight: 600;
+  font-size: 14px;
+  color: #949ba5;
+}
+
+.cardPage .cardInformation .cardInformation__economy {
+  font-weight: 600;
+  font-size: 15px;
+  padding-top: 30px;
+}
+
+.cardPage .cardInformation .cardInformation__rowImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 38px 0;
+}
+
+.cardPage .cardInformation .cardInformation__rowImg img {
+  width: 89px;
+  height: 89px;
+  cursor: pointer;
+}
+
+.cardPage .cardInformation .cardInformation__sizes {
+  font-size: 16px;
+  font-weight: 500;
+  color: #949ba5;
+}
+
+.cardPage .cardInformation .cardInformation__sizes span {
+  font-weight: 700;
+  color: #353a43;
+}
+
+.cardPage .cardInformation .cardInformation__dimensionalGrid {
+  font-weight: 600;
+  font-size: 16px;
+  color: #4690ff;
+  padding-top: 8px;
+}
+
+.cardPage .cardInformation .cardInformation__colorTShirt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40%;
+  padding: 38px 0;
+}
+
+.cardPage .cardInformation .cardInformation__colorTShirt .colors {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.cardPage .cardInformation .cardInformation__colorTShirt .colorTShirt_red {
+  background: #f71d25;
+}
+
+.cardPage .cardInformation .cardInformation__colorTShirt .colorTShirt_blue {
+  background: #21c0fc;
+}
+
+.cardPage .cardInformation .cardInformation__colorTShirt .colorTShirt_white {
+  background: #dad9d9;
+}
+
+.cardPage .cardInformation .cardInformation__colorTShirt .colorTShirt_black {
+  background: #000;
+}
+
+.cardPage .cardInformation .cardInformation__colorTShirt .colorTShirt_grey {
+  background: #bebebe;
+}
+
+.cardPage .cardInformation .cardInformation__colorTShirt .colorTShirt_pink {
+  background: #c7a3c7;
+}
+
+.cardPage .cardInformation .cardInformation__colorTShirt .colorTShirt_brown {
+  background: #e2cba7;
+}
+
+.cardPage .cardInformation .cardInformation__btn {
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  background-color: #2c7bf1;
+  border-radius: 10px;
+  padding: 1em;
+  width: 50%;
+  cursor: pointer;
+}
+
+.cardPage .aboutTheProduct {
+  background: #ffffff;
+  border-radius: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+  padding: 2em;
+}
+
+.cardPage .aboutTheProduct .aboutTheProduct__colLeft {
+  width: 50%;
+}
+
+.cardPage .aboutTheProduct .aboutTheProduct__colLeft .colLeft__title {
+  font-weight: 800;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.cardPage .aboutTheProduct .aboutTheProduct__colLeft .colLeft__colInformation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cardPage .aboutTheProduct .aboutTheProduct__colLeft .colLeft__colInformation ul {
+  width: 50%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (70px)[12];
+      grid-template-rows: repeat(12, 70px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardPage .aboutTheProduct .aboutTheProduct__colLeft .colLeft__colInformation ul li {
+  font-weight: 500;
+  font-size: 14px;
+  color: #949ba5;
+  line-height: 26px;
+}
+
+.cardPage .aboutTheProduct .aboutTheProduct__colLeft .colLeft__colInformation ul li p {
+  font-weight: 700;
+  color: #353a43;
+}
+
+.cardPage .aboutTheProduct .aboutTheProduct__colRight {
+  width: 50%;
+}
+
+.cardPage .aboutTheProduct .aboutTheProduct__colRight .colRight__description {
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.cardPage .aboutTheProduct .aboutTheProduct__colRight .colRight__description p {
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 77px;
+  padding-top: 10px;
+}
+
+.cardPage .aboutTheProduct .aboutTheProduct__colRight .colRight__refund {
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.cardPage .aboutTheProduct .aboutTheProduct__colRight .colRight__refund p {
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 60px;
+  padding-top: 10px;
+}
+
+.cardPage .aboutTheProduct .aboutTheProduct__colRight .colRight__conditions {
+  font-weight: 600;
+  font-size: 16px;
+  padding: 0 0 40px 1em;
+}
+
+.cardPage .aboutTheProduct .aboutTheProduct__colRight .colRight__manual {
+  font-weight: 600;
+  font-size: 16px;
+  padding: 0 0 40px 1em;
+}
+
+.cardPage .similarProducts {
+  background: #ffffff;
+  border-radius: 14px;
+  margin-top: 40px;
+  padding: 1em;
+}
+
+.cardPage .similarProducts .similarProducts__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardPage .similarProducts .similarProducts__header .similarProducts__title {
+  width: 70%;
+  font-weight: 800;
+  font-size: 26px;
+}
+
+.cardPage .similarProducts .similarProducts__header .similarProducts__btn img {
+  cursor: pointer;
+}
+
+.cardPage .similarProducts .similarProducts__header .similarProducts__btn img:last-child {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.cardPage .similarProducts .similarProducts__header .similarProducts__dropDown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f6f6f6;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cardPage .similarProducts .similarProducts__header .similarProducts__dropDown img {
+  padding-left: 0.4em;
+}
+
+.cardPage .similarProducts .similarProducts__rowCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 2em;
+}
+
+.cardPage .similarProducts .similarProducts__rowCards .similarProducts__card .card__img {
+  position: relative;
+}
+
+.cardPage .similarProducts .similarProducts__rowCards .similarProducts__card .card__img img:last-child {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  cursor: pointer;
+}
+
+.cardPage .similarProducts .similarProducts__rowCards .similarProducts__card .card__name {
+  font-weight: 700;
+  font-size: 16px;
+  padding-left: 0.5em;
+}
+
+.cardPage .similarProducts .similarProducts__rowCards .similarProducts__card .card__manufacturer {
+  font-weight: 600;
+  font-size: 14px;
+  color: #949ba5;
+  padding-left: 0.5em;
+}
+
+.cardPage .similarProducts .similarProducts__rowCards .similarProducts__card .card__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0.5em;
+}
+
+.cardPage .similarProducts .similarProducts__rowCards .similarProducts__card .card__price .card__discountedPrice {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.cardPage .similarProducts .similarProducts__rowCards .similarProducts__card .card__price .card__priceWithoutDiscount {
+  font-weight: 700;
+  font-size: 14px;
+  color: #949ba5;
+  text-decoration: line-through;
+  padding: 0.5em 0;
+}
+
+.cardPage .similarProducts .similarProducts__rowCards .similarProducts__card .card__price .card__discount {
+  width: 30%;
+  text-align: end;
+  font-weight: 800;
+  font-size: 16px;
+  color: #ff4b77;
+}
+
+.cardPage .haveYouWatched {
+  background: #ffffff;
+  border-radius: 14px;
+  margin-top: 40px;
+  padding: 1em;
+}
+
+.cardPage .haveYouWatched .haveYouWatched__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardPage .haveYouWatched .haveYouWatched__header .haveYouWatched__title {
+  width: 70%;
+  font-weight: 800;
+  font-size: 26px;
+}
+
+.cardPage .haveYouWatched .haveYouWatched__header .haveYouWatched__btn img {
+  cursor: pointer;
+}
+
+.cardPage .haveYouWatched .haveYouWatched__header .haveYouWatched__btn img:last-child {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.cardPage .haveYouWatched .haveYouWatched__header .haveYouWatched__dropDown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f6f6f6;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cardPage .haveYouWatched .haveYouWatched__header .haveYouWatched__dropDown img {
+  padding-left: 0.4em;
+}
+
+.cardPage .haveYouWatched .haveYouWatched__rowCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 2em;
+}
+
+.cardPage .haveYouWatched .haveYouWatched__rowCards .haveYouWatched__card .card__img {
+  position: relative;
+}
+
+.cardPage .haveYouWatched .haveYouWatched__rowCards .haveYouWatched__card .card__img img:last-child {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  cursor: pointer;
+}
+
+.cardPage .haveYouWatched .haveYouWatched__rowCards .haveYouWatched__card .card__name {
+  font-weight: 700;
+  font-size: 16px;
+  padding-left: 0.5em;
+}
+
+.cardPage .haveYouWatched .haveYouWatched__rowCards .haveYouWatched__card .card__manufacturer {
+  font-weight: 600;
+  font-size: 14px;
+  color: #949ba5;
+  padding-left: 0.5em;
+}
+
+.cardPage .haveYouWatched .haveYouWatched__rowCards .haveYouWatched__card .card__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0.5em;
+}
+
+.cardPage .haveYouWatched .haveYouWatched__rowCards .haveYouWatched__card .card__price .card__discountedPrice {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.cardPage .haveYouWatched .haveYouWatched__rowCards .haveYouWatched__card .card__price .card__priceWithoutDiscount {
+  font-weight: 700;
+  font-size: 14px;
+  color: #949ba5;
+  text-decoration: line-through;
+  padding: 0.5em 0;
+}
+
+.cardPage .haveYouWatched .haveYouWatched__rowCards .haveYouWatched__card .card__price .card__discount {
+  width: 30%;
+  text-align: end;
+  font-weight: 800;
+  font-size: 16px;
+  color: #ff4b77;
+}
+
+.cardPage .TShirtRating {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1em;
+  margin-top: 40px;
+}
+
+.cardPage .TShirtRating .TShirtRating__title {
+  font-weight: 800;
+  font-size: 26px;
+}
+
+.cardPage .TShirtRating .TShirtRating__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cardPage .TShirtRating .TShirtRating__row .TShirtRating__colLeft {
+  background: #f6f6f6;
+  border-radius: 14px;
+  width: 60%;
+  padding: 2em;
+  margin-top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardPage .TShirtRating .TShirtRating__row .TShirtRating__colLeft .colLeft__rating .rating__rating {
+  font-weight: 800;
+  font-size: 50px;
+}
+
+.cardPage .TShirtRating .TShirtRating__row .TShirtRating__colLeft .colLeft__rating .rating__stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em 0 2em 0;
+}
+
+.cardPage .TShirtRating .TShirtRating__row .TShirtRating__colLeft .colLeft__rating .rating__reviews {
+  font-weight: 600;
+  font-size: 14px;
+  color: #949ba5;
+}
+
+.cardPage .TShirtRating .TShirtRating__row .TShirtRating__colLeft .colLeft__percentages .percentages__scale {
+  font-weight: 600;
+  font-size: 16px;
+  color: #6f747c;
+  margin-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardPage .TShirtRating .TShirtRating__row .TShirtRating__colLeft .colLeft__percentages .percentages__scale .scale_grey {
+  width: 20em;
+  height: 3px;
+  background: #949ba5;
+  margin-right: 1em;
+}
+
+.cardPage .TShirtRating .TShirtRating__row .TShirtRating__colLeft .colLeft__percentages .percentages__scale .scale_grey .scale_orange {
+  height: 3px;
+  background: #ff9939;
+}
+
+.cardPage .TShirtRating .TShirtRating__row .TShirtRating__colRight {
+  width: 40%;
+  padding-left: 1em;
+}
+
+.cardPage .TShirtRating .TShirtRating__row .TShirtRating__colRight .colRight__Accordance {
+  padding-top: 1em;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.cardPage .TShirtRating .TShirtRating__row .TShirtRating__colRight .colRight__rowPercentages {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "malomerite respond" "more .";
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-grid-rows: 85px 100px;
+      grid-template-rows: 85px 100px;
+}
+
+.cardPage .TShirtRating .TShirtRating__row .TShirtRating__colRight .colRight__rowPercentages .colRight__percentages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardPage .TShirtRating .TShirtRating__row .TShirtRating__colRight .colRight__rowPercentages .colRight__percentages .percentages__circrle {
+  position: relative;
+  width: 75px;
+  height: 73px;
+}
+
+.cardPage .TShirtRating .TShirtRating__row .TShirtRating__colRight .colRight__rowPercentages .colRight__percentages .percentages__circrle svg {
+  width: 75px;
+  height: 73px;
+  position: relative;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.cardPage .TShirtRating .TShirtRating__row .TShirtRating__colRight .colRight__rowPercentages .colRight__percentages .percentages__circrle svg circle {
+  width: 66px;
+  height: 66px;
+  fill: none;
+  stroke-width: 3;
+  stroke: #000;
+  -webkit-transform: translate(5px, 5px);
+          transform: translate(5px, 5px);
+  stroke-dasharray: 207;
+  stroke-dashoffset: 414;
+}
+
+.cardPage .TShirtRating .TShirtRating__row .TShirtRating__colRight .colRight__rowPercentages .colRight__percentages .percentages__circrle svg circle:first-child {
+  stroke-dashoffset: 0;
+  stroke: #eeeded;
+}
+
+.cardPage .TShirtRating .TShirtRating__row .TShirtRating__colRight .colRight__rowPercentages .colRight__percentages .percentages__circrle svg circle:last-child {
+  stroke: #ff9939;
+}
+
+.cardPage .TShirtRating .TShirtRating__row .TShirtRating__colRight .colRight__rowPercentages .colRight__percentages .percentages__circrle .percentages__number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: #6f747c;
+}
+
+.cardPage .TShirtRating .TShirtRating__row .TShirtRating__colRight .colRight__rowPercentages .colRight__percentages .percentages__text {
+  font-weight: 600;
+  font-size: 16px;
+  padding-left: 1em;
+}
+
+.cardPage .reviews {
+  background: #ffffff;
+  border-radius: 14px;
+  margin-top: 40px;
+  padding: 1em;
+}
+
+.cardPage .reviews .reviews__textTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 3em;
+  border-bottom: 1px solid #cacfd6;
+}
+
+.cardPage .reviews .reviews__textTitle .title {
+  font-weight: 800;
+  font-size: 26px;
+}
+
+.cardPage .reviews .reviews__textTitle .title span {
+  font-weight: 600;
+  font-size: 18px;
+  color: #949ba5;
+}
+
+.cardPage .reviews .reviews__textTitle .text {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.cardPage .reviews .reviews__btn_write {
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  background: #2c7bf1;
+  padding: 0.8em 0;
+  border-radius: 10px;
+  width: 12em;
+  cursor: pointer;
+  margin-top: 2em;
+}
+
+.cardPage .reviews .reviews__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2em 0 1em 0;
+  border-bottom: 1px solid #cacfd6;
+}
+
+.cardPage .reviews .reviews__user .user__information {
+  padding: 0.5em 0 0 1.5em;
+  width: 100%;
+}
+
+.cardPage .reviews .reviews__user .user__information .user__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardPage .reviews .reviews__user .user__information .user__name p {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.cardPage .reviews .reviews__user .user__information .user__name p::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #353a43;
+}
+
+.cardPage .reviews .reviews__user .user__information .user__name span {
+  font-weight: 600;
+  font-size: 14px;
+  color: #949ba5;
+  padding-left: 1em;
+}
+
+.cardPage .reviews .reviews__user .user__information .user__rating {
+  width: 10%;
+  padding: 0.5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cardPage .reviews .reviews__user .user__information .user__comments {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.cardPage .reviews .reviews__user .user__information .user__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardPage .reviews .reviews__user .user__information .user__btn .btn__like {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.cardPage .reviews .reviews__user .user__information .user__btn .btn__like img {
+  cursor: pointer;
+}
+
+.cardPage .reviews .reviews__user .user__information .user__btn .btn__like span {
+  font-weight: 600;
+  font-size: 16px;
+  color: #949ba5;
+  padding-left: 0.3em;
+}
+
+.cardPage .reviews .reviews__user .user__information .user__btn .btn__dislike {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 4px 0 0 0.8em;
+}
+
+.cardPage .reviews .reviews__user .user__information .user__btn .btn__dislike img {
+  cursor: pointer;
+}
+
+.cardPage .reviews .reviews__user .user__information .user__btn .btn__dislike span {
+  font-weight: 600;
+  font-size: 16px;
+  color: #949ba5;
+  padding-left: 0.3em;
+}
+
+.cardPage .reviews .reviews__btnShowMore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2em 0;
+  cursor: pointer;
+}
+
+.cardPage .reviews .reviews__btnShowMore p {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.cardPage .reviews .reviews__btnShowMore p::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #353a43;
+}
+
+.cardPage .footer {
+  background: #ffffff;
+  border-top: 2px dashed rgba(106, 125, 154, 0.6);
+  position: relative;
+  margin-top: 80px;
+  padding: 5em 0;
+}
+
+.cardPage .footer .scissors {
+  position: absolute;
+  top: -32px;
+  right: 100px;
+}
+
+.cardPage .footer .footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 500px;
+}
+
+.cardPage .footer .footer__content .content__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cardPage .footer .footer__content .content__col ul li {
+  font-weight: 500;
+  font-size: 16px;
+  color: #949ba5;
+  line-height: 2em;
+}
+
+.cardPage .footer .footer__content .content__col ul li:first-child {
+  font-weight: 600;
+  font-size: 18px;
+  color: #353a43;
+}
+
+.cardPage .footer .footer__content .content__col ol li {
+  font-weight: 500;
+  font-size: 16px;
+  color: #949ba5;
+  line-height: 1.5em;
+}
+
+.cardPage .footer .footer__content .content__col .socialNetwork {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-rows: (3em)[2] 4em;
+      grid-template-rows: repeat(2, 3em) 4em;
+  -ms-grid-columns: (3em)[3];
+      grid-template-columns: repeat(3, 3em);
+      grid-template-areas: "faceBook isntagram ok " "twitter youtube wk " "visa . masterCard";
+}
+
+.cardPage .footer .footer__content .content__col .socialNetwork .masterCard {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+}
+
+.cardPage .footer .footer__content .content__col .socialNetwork img {
+  cursor: pointer;
+}
+
+@media all and (max-width: 376px) {
+  .cardPage .header .container .header__top {
+    display: none;
+  }
+  .cardPage .header .container .header__mid .mid__burgerMenu,
+  .cardPage .header .container .header__mid .midNav {
+    display: none;
+  }
+  .cardPage .header .container .header__bottom {
+    display: none;
+  }
+  .cardPage .currentPath {
+    display: none;
+  }
+  .cardPage .container .card .card__detail {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=style.css.map */

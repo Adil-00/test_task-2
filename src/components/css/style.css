@@ -1631,15 +1631,9 @@
   }
 }
 
-@media all and (max-width: 415px) {
-  .cardPage .container .card .card__detail .cardImg {
-    height: 350px;
-  }
-  .cardPage .container .card .card__detail .cardImg .cardImg_img img {
-    width: 200px;
-  }
-  .cardPage .container .aboutTheProduct .aboutTheProduct__colRight .colRight__manual_img img {
-    width: 100%;
+@media all and (max-width: 400px) {
+  .cardPage .container .TShirtRating .TShirtRating__row .colLeft__percentages .percentages__scale .scale_grey {
+    width: 14em;
   }
 }
 /*# sourceMappingURL=style.css.map */

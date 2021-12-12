@@ -1582,27 +1582,15 @@ $CBlack: #353a43;
     }
   }
 
-  @media all and (max-width: 415px) {
+  @media all and (max-width: 400px) {
     .container {
-      .card {
-        .card__detail {
-          .cardImg {
-            height: 350px;
-
-            .cardImg_img {
-              img {
-                width: 200px;
+      .TShirtRating {
+        .TShirtRating__row {
+          .colLeft__percentages {
+            .percentages__scale {
+              .scale_grey {
+                width: 14em;
               }
-            }
-          }
-        }
-      }
-
-      .aboutTheProduct {
-        .aboutTheProduct__colRight {
-          .colRight__manual_img {
-            img {
-              width: 100%;
             }
           }
         }

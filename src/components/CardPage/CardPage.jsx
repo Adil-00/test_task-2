@@ -23,11 +23,28 @@ import HaveYouWatched from "../HaveYouWatched/HaveYouWatched";
 import TShirtRating from "../T-shirtRating/TShirtRating";
 import Reviews from "../Reviews/Reviews";
 import Footer from "../Footer/Footer";
+
+import icon_homeMobile from "../icon/icon_homeMobile.png";
+import icon_favoriteMobile from "../icon/icon_favoriteMobile.png";
+import icon_basketMobile from "../icon/icon_basketMobile.png";
+import icon_burgerMobile from "../icon/icon_burgerMobile.png";
+import icon_exitMobile from "../icon/icon_exitMobile.png";
+
+import icon_rollUp from "../icon/icon_rollUp.png";
 const CardPage = () => {
+  const pageNumbers = [1, 2, 3, 4];
+
   return (
     <div className="cardPage">
       <div className="header">
         <div className="container">
+          <div className="header_iconMobile">
+            <img src={icon_homeMobile} alt="" />
+            <img src={icon_favoriteMobile} alt="" />
+            <img src={icon_basketMobile} alt="" />
+            <img src={icon_burgerMobile} alt="" />
+            <img src={icon_exitMobile} alt="" />
+          </div>
           <div className="header__top">
             <ul>
               <li className="topNav">
@@ -109,6 +126,24 @@ const CardPage = () => {
       <div className="container">
         <div className="card">
           <div className="updated">Обновлено 20.08.2020 17:16</div>
+          <div className="cardMobile">
+            <div className="cardInformation__title">Футболка Smile </div>
+            <div className="cardInformation__manufacturer">
+              Производитель: bluzki_style
+            </div>
+
+            <div className="cardInformation__information">
+              <img src={icon_email} alt="" />
+              <span>
+                Для получения информации <br /> касательно цен, индивидуальных{" "}
+                <br />
+                заказов и других вопросов:
+              </span>
+            </div>
+
+            <div className="updatedMobile">Обновлено 20.08.2020 17:16</div>
+          </div>
+
           <div className="card__detail">
             <div className="cardImg">
               <div className="cardImg__btn_left cardImg__btn">
@@ -125,6 +160,17 @@ const CardPage = () => {
 
               <div className="cardImg__icon_favorite">
                 <img src={icon_favorite} alt="" />
+              </div>
+
+              <div className="pages">
+                {window.screen.width <= 415
+                  ? pageNumbers.map((item) => (
+                      <div
+                        className={`page ${item === 1 ? "pageActive" : " "}`}
+                        key={item}
+                      ></div>
+                    ))
+                  : " "}
               </div>
             </div>
 
@@ -295,6 +341,10 @@ const CardPage = () => {
                   <p>34</p>
                 </li>
               </ul>
+            </div>
+
+            <div className="colLeft__btnRollUp">
+              Свернуть <img src={icon_rollUp} alt="" />
             </div>
           </div>
 

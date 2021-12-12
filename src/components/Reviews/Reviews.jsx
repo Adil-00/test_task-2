@@ -12,9 +12,9 @@ const Reviews = () => {
     <div className="container">
       <div className="reviews">
         <div className="reviews__textTitle">
-          <div className="title">
-            отзывы <span>(всего 345)</span>
-          </div>
+          <div className="title">отзывы</div>
+
+          <div className="total">(всего 345)</div>
 
           <div className="text">Правила оформелния отзывов</div>
         </div>

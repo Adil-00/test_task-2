@@ -21,6 +21,10 @@
   background: #fff;
 }
 
+.cardPage .header .header_iconMobile {
+  display: none;
+}
+
 .cardPage .header .header__top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -188,6 +192,47 @@
   color: #6f747c;
 }
 
+.cardPage .card .cardMobile {
+  display: none;
+}
+
+.cardPage .card .cardMobile .cardInformation__title {
+  font-weight: 700;
+  font-size: 36px;
+  color: #353a43;
+}
+
+.cardPage .card .cardMobile .cardInformation__manufacturer {
+  font-size: 16px;
+  font-weight: 600;
+  color: #353a43;
+  padding: 1em 0;
+}
+
+.cardPage .card .cardMobile .cardInformation__information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-weight: 400;
+  font-size: 14px;
+  color: #949ba5;
+  cursor: pointer;
+}
+
+.cardPage .card .cardMobile .cardInformation__information img {
+  padding: 0.3em 0.3em 0 0;
+}
+
+.cardPage .card .cardMobile .updatedMobile {
+  padding: 1em 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: #6f747c;
+}
+
 .cardPage .card .card__detail {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -201,11 +246,17 @@
   padding: 7em 2em 1em 2em;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "cardImg__btn_left cardImg_img cardImg__btn_right" ". . cardImg__icon_favorite";
+      grid-template-areas: "cardImg__btn_left cardImg_img cardImg__btn_right" ". . cardImg__icon_favorite" ". pages .";
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+}
+
+.cardPage .card .cardImg .pages {
+  display: none;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
 }
 
 .cardPage .card .cardImg .cardImg__btn_right img {
@@ -447,6 +498,22 @@
   color: #353a43;
 }
 
+.cardPage .aboutTheProduct .aboutTheProduct__colLeft .colLeft__btnRollUp {
+  font-weight: 700;
+  font-size: 16px;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardPage .aboutTheProduct .aboutTheProduct__colLeft .colLeft__btnRollUp img {
+  padding-left: 0.5em;
+}
+
 .cardPage .aboutTheProduct .aboutTheProduct__colRight {
   width: 50%;
 }
@@ -544,9 +611,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding-top: 2em;
 }
 
@@ -665,9 +732,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding-top: 2em;
 }
 
@@ -727,6 +794,32 @@
   font-weight: 800;
   font-size: 16px;
   color: #ff4b77;
+}
+
+.cardPage .pages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1em 0;
+}
+
+.cardPage .pages .page {
+  width: 10px;
+  height: 10px;
+  background: #949ba5;
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+  border-radius: 50%;
+  margin: 0 1em;
+  cursor: pointer;
+}
+
+.cardPage .pages .pageActive {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
 }
 
 .cardPage .TShirtRating {
@@ -909,12 +1002,10 @@
 }
 
 .cardPage .reviews .reviews__textTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr 4fr 1fr;
+      grid-template-columns: 0.5fr 4fr 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -927,7 +1018,7 @@
   font-size: 26px;
 }
 
-.cardPage .reviews .reviews__textTitle .title span {
+.cardPage .reviews .reviews__textTitle .total {
   font-weight: 600;
   font-size: 18px;
   color: #949ba5;
@@ -1107,7 +1198,10 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 500px;
+  min-height: 500px;
+  padding: 0 1em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .cardPage .footer .footer__content .content__col {
@@ -1166,9 +1260,20 @@
   cursor: pointer;
 }
 
-@media all and (max-width: 376px) {
+@media all and (max-width: 1025px) {
+  .cardPage .header .container .header_iconMobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 2em 1.5em;
+  }
   .cardPage .header .container .header__top {
     display: none;
+  }
+  .cardPage .header .container .header__mid {
+    padding: 0 1em 1em 1em;
   }
   .cardPage .header .container .header__mid .mid__burgerMenu,
   .cardPage .header .container .header__mid .midNav {
@@ -1177,14 +1282,364 @@
   .cardPage .header .container .header__bottom {
     display: none;
   }
+  .cardPage .currentPath .container p {
+    padding-left: 1em;
+  }
+  .cardPage .container .card .card__detail .cardImg {
+    padding: 1em 0;
+    height: 400px;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  .cardPage .container .card .card__detail .cardImg .cardImg_img img {
+    display: block;
+    width: 300px;
+  }
+  .cardPage .container .card .card__detail .cardImg .cardImg__icon_favorite {
+    margin: 0;
+  }
+  .cardPage .container .card .card__detail .cardInformation .cardInformation__manufacturerAndInformation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cardPage .container .card .card__detail .cardInformation .cardInformation__manufacturerAndInformation .cardInformation__information {
+    padding: 1em 0;
+  }
+  .cardPage .container .card .card__detail .cardInformation .cardInformation__price {
+    width: 100%;
+  }
+  .cardPage .container .card .card__detail .cardInformation .cardInformation__colorTShirt {
+    width: 60%;
+  }
+  .cardPage .container .TShirtRating .TShirtRating__title {
+    text-align: center;
+  }
+  .cardPage .container .TShirtRating .TShirtRating__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cardPage .container .TShirtRating .TShirtRating__row .TShirtRating__colLeft {
+    width: 100%;
+  }
+  .cardPage .container .TShirtRating .TShirtRating__row .TShirtRating__colRight {
+    padding: 0;
+    width: 100%;
+  }
+  .cardPage .container .TShirtRating .TShirtRating__row .TShirtRating__colRight .colRight__Accordance {
+    text-align: center;
+  }
+  .cardPage .container .TShirtRating .TShirtRating__row .TShirtRating__colRight .colRight__rowPercentages {
+        grid-template-areas: "malomerite more respond";
+    -ms-grid-rows: 100px;
+        grid-template-rows: 100px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .cardPage .container .footer__content .content__col {
+    width: 50%;
+  }
+  .cardPage .container .footer__content .content__col:nth-child(2), .cardPage .container .footer__content .content__col:first-child {
+    padding-bottom: 3em;
+  }
+  .cardPage .container .footer__content .content__col ul,
+  .cardPage .container .footer__content .content__col ol {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .cardPage .container .footer__content .content__col .socialNetwork {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .cardPage .container .footer__content .content__col:last-child {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-bottom: 10em;
+  }
+}
+
+@media all and (max-width: 769px) {
+  .cardPage .container .card .card__detail .cardImg {
+    width: 50%;
+  }
+  .cardPage .container .card .card__detail .cardImg .cardImg_img img {
+    width: 100%;
+  }
+  .cardPage .container .card .card__detail .cardInformation {
+    width: 50%;
+    padding: 0 0 0 2em;
+  }
+  .cardPage .container .card .card__detail .cardInformation .cardInformation__rowImg img:last-child {
+    display: none;
+  }
+  .cardPage .container .aboutTheProduct .aboutTheProduct__colRight .colRight__manual_img img {
+    width: 340px;
+  }
+  .cardPage .container .similarProducts .similarProducts__header .similarProducts__title {
+    width: 60%;
+  }
+  .cardPage .container .haveYouWatched .haveYouWatched__header .haveYouWatched__title {
+    width: 60%;
+  }
+}
+
+@media all and (max-width: 577px) {
+  .cardPage .header .container .header__mid .mid__logo {
+    padding: 0;
+  }
+  .cardPage .header .container .header__mid .mid__search {
+    -webkit-filter: brightness(80%);
+            filter: brightness(80%);
+    padding: 0 0 0 0.5em;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cardPage .header .container .header__mid .mid__search input {
+    display: none;
+  }
   .cardPage .currentPath {
     display: none;
+  }
+  .cardPage .container .card .card__detail .cardImg {
+    height: 300px;
+  }
+  .cardPage .container .card .card__detail .cardInformation .cardInformation__rowImg {
+    display: none;
+  }
+  .cardPage .container .card .card__detail .cardInformation .cardInformation__price {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cardPage .container .card .card__detail .cardInformation .cardInformation__colorTShirt {
+    width: 100%;
+  }
+  .cardPage .container .aboutTheProduct .aboutTheProduct__colRight .colRight__manual_img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .cardPage .container .aboutTheProduct .aboutTheProduct__colRight .colRight__manual_img img {
+    width: 90%;
+  }
+  .cardPage .container .similarProducts .similarProducts__header .similarProducts__title {
+    width: 100%;
+    text-align: center;
+  }
+  .cardPage .container .similarProducts .similarProducts__header .similarProducts__btn,
+  .cardPage .container .similarProducts .similarProducts__header .similarProducts__dropDown {
+    display: none;
+  }
+  .cardPage .container .haveYouWatched .haveYouWatched__header .haveYouWatched__title {
+    width: 100%;
+    text-align: center;
+  }
+  .cardPage .container .haveYouWatched .haveYouWatched__header .haveYouWatched__btn,
+  .cardPage .container .haveYouWatched .haveYouWatched__header .haveYouWatched__dropDown {
+    display: none;
+  }
+  .cardPage .container .reviews .reviews__textTitle {
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    -ms-grid-columns: 2fr 2fr 1fr;
+        grid-template-columns: 2fr 2fr 1fr;
+  }
+  .cardPage .container .reviews .reviews__textTitle .title {
+    text-align: center;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .cardPage .container .reviews .reviews__textTitle .total {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+  }
+  .cardPage .container .reviews .reviews__textTitle .text {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  .cardPage .container .TShirtRating .TShirtRating__row .TShirtRating__colLeft {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cardPage .container .TShirtRating .TShirtRating__row .TShirtRating__colLeft .colLeft__rating {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "rating__rating rating__stars" "rating__rating rating__reviews";
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    text-align: center;
+  }
+  .cardPage .container .TShirtRating .TShirtRating__row .TShirtRating__colLeft .colLeft__rating .rating__stars {
+    padding-bottom: 0.5em;
+  }
+  .cardPage .container .TShirtRating .TShirtRating__row .TShirtRating__colLeft .colLeft__rating .rating__stars img {
+    padding: 0 0.5em;
+  }
+  .cardPage .container .TShirtRating .TShirtRating__row .TShirtRating__colLeft .colLeft__rating .rating__rating {
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .cardPage .container .TShirtRating .TShirtRating__row .TShirtRating__colLeft .colLeft__rating .rating__reviews {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+  }
+  .cardPage .container .TShirtRating .TShirtRating__row .TShirtRating__colLeft .colLeft__percentages {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cardPage .container .TShirtRating .TShirtRating__row .TShirtRating__colRight .colRight__rowPercentages {
+        grid-template-areas: "malomerite" "more " "respond";
+  }
+  .cardPage .container .TShirtRating .TShirtRating__row .TShirtRating__colRight .respond,
+  .cardPage .container .TShirtRating .TShirtRating__row .TShirtRating__colRight .more,
+  .cardPage .container .TShirtRating .TShirtRating__row .TShirtRating__colRight .malomerite {
+    padding: 1em 0;
+  }
+}
+
+@media all and (max-width: 415px) {
+  .cardPage .container .card .updated {
+    display: none;
+  }
+  .cardPage .container .card .cardMobile {
+    display: block;
   }
   .cardPage .container .card .card__detail {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .cardPage .container .card .card__detail .cardImg {
+    padding-bottom: 0;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .cardPage .container .card .card__detail .cardImg .cardImg__icon_favorite {
+    display: none;
+  }
+  .cardPage .container .card .card__detail .cardImg .pages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .cardPage .container .card .card__detail .cardInformation {
+    width: 100%;
+    padding: 0;
+  }
+  .cardPage .container .card .card__detail .cardInformation .cardInformation__title,
+  .cardPage .container .card .card__detail .cardInformation .cardInformation__manufacturerAndInformation,
+  .cardPage .container .card .card__detail .cardInformation .cardInformation__rowImg {
+    display: none;
+  }
+  .cardPage .container .card .card__detail .cardInformation .cardInformation__sizes {
+    padding: 0.5em 0;
+  }
+  .cardPage .container .card .card__detail .cardInformation .cardInformation__btn {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .cardPage .container .aboutTheProduct {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .cardPage .container .aboutTheProduct .aboutTheProduct__colLeft,
+  .cardPage .container .aboutTheProduct .aboutTheProduct__colRight {
+    width: 100%;
+  }
+  .cardPage .container .aboutTheProduct .aboutTheProduct__colRight .colRight__description,
+  .cardPage .container .aboutTheProduct .aboutTheProduct__colRight .colRight__refund {
+    text-align: center;
+  }
+  .cardPage .container .aboutTheProduct .aboutTheProduct__colLeft {
+    padding-top: 1em;
+  }
+  .cardPage .container .aboutTheProduct .aboutTheProduct__colLeft .colLeft__title {
+    text-align: center;
+  }
+  .cardPage .container .aboutTheProduct .aboutTheProduct__colLeft .colLeft__colInformation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cardPage .container .aboutTheProduct .aboutTheProduct__colLeft .colLeft__colInformation ul {
+    text-align: center;
+  }
+  .cardPage .container .aboutTheProduct .aboutTheProduct__colLeft .colLeft__btnRollUp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .cardPage .container .reviews .reviews__user .user__information .user__name p {
+    font-size: 15px;
+  }
+}
+
+@media all and (max-width: 415px) {
+  .cardPage .container .card .card__detail .cardImg {
+    height: 350px;
+  }
+  .cardPage .container .card .card__detail .cardImg .cardImg_img img {
+    width: 200px;
+  }
+  .cardPage .container .aboutTheProduct .aboutTheProduct__colRight .colRight__manual_img img {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

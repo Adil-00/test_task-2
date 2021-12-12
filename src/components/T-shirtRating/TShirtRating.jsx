@@ -62,6 +62,7 @@ const TShirtRating = () => {
               </div>
             </div>
           </div>
+
           <div className="TShirtRating__colRight">
             <div className="colRight__Accordance">Соответствие размеру</div>
             <div className="colRight__rowPercentages">

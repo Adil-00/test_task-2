@@ -6,8 +6,6 @@
   font-family: "Manrope", sans-serif;
 }
 
-$iphone8: 376px;
-
 $CBlack: #353a43;
 
 .container {
@@ -21,6 +19,10 @@ $CBlack: #353a43;
 
   .header {
     background: #fff;
+
+    .header_iconMobile {
+      display: none;
+    }
 
     .header__top {
       display: flex;
@@ -163,6 +165,44 @@ $CBlack: #353a43;
       color: #6f747c;
     }
 
+    .cardMobile {
+      display: none;
+
+      .cardInformation__title {
+        font-weight: 700;
+        font-size: 36px;
+        color: $CBlack;
+      }
+
+      .cardInformation__manufacturer {
+        font-size: 16px;
+        font-weight: 600;
+        color: $CBlack;
+        padding: 1em 0;
+      }
+
+      .cardInformation__information {
+        display: flex;
+        align-items: flex-start;
+        font-weight: 400;
+        font-size: 14px;
+        color: #949ba5;
+        cursor: pointer;
+
+        img {
+          padding: 0.3em 0.3em 0 0;
+        }
+      }
+
+      .updatedMobile {
+        padding: 1em 0;
+
+        font-size: 12px;
+        font-weight: 400;
+        color: #6f747c;
+      }
+    }
+
     .card__detail {
       display: flex;
     }
@@ -176,10 +216,15 @@ $CBlack: #353a43;
       display: grid;
       grid-template-areas:
         "cardImg__btn_left cardImg_img cardImg__btn_right"
-        ". . cardImg__icon_favorite";
+        ". . cardImg__icon_favorite"
+        ". pages .";
       align-items: center;
       justify-items: center;
 
+      .pages {
+        display: none;
+        grid-column-start: 2;
+      }
       .cardImg__btn_right {
         img {
           transform: rotate(180deg);
@@ -391,6 +436,18 @@ $CBlack: #353a43;
           }
         }
       }
+
+      .colLeft__btnRollUp {
+        font-weight: 700;
+        font-size: 16px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          padding-left: 0.5em;
+        }
+      }
     }
 
     .aboutTheProduct__colRight {
@@ -483,7 +540,7 @@ $CBlack: #353a43;
 
     .similarProducts__rowCards {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
 
       padding-top: 2em;
 
@@ -595,7 +652,7 @@ $CBlack: #353a43;
 
     .haveYouWatched__rowCards {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
 
       padding-top: 2em;
 
@@ -656,6 +713,27 @@ $CBlack: #353a43;
           }
         }
       }
+    }
+  }
+
+  .pages {
+    display: flex;
+    justify-content: center;
+
+    padding: 1em 0;
+
+    .page {
+      width: 10px;
+      height: 10px;
+      background: #949ba5;
+      filter: brightness(120%);
+      border-radius: 50%;
+      margin: 0 1em;
+      cursor: pointer;
+    }
+
+    .pageActive {
+      filter: brightness(80%);
     }
   }
 
@@ -818,8 +896,8 @@ $CBlack: #353a43;
     padding: 1em;
 
     .reviews__textTitle {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 0.5fr 4fr 1fr;
       align-items: center;
 
       padding-bottom: 3em;
@@ -829,12 +907,12 @@ $CBlack: #353a43;
       .title {
         font-weight: 800;
         font-size: 26px;
+      }
 
-        span {
-          font-weight: 600;
-          font-size: 18px;
-          color: #949ba5;
-        }
+      .total {
+        font-weight: 600;
+        font-size: 18px;
+        color: #949ba5;
       }
 
       .text {
@@ -984,7 +1062,9 @@ $CBlack: #353a43;
     .footer__content {
       display: flex;
       justify-content: space-between;
-      height: 500px;
+      min-height: 500px;
+      padding: 0 1em;
+      flex-wrap: wrap;
 
       .content__col {
         display: flex;
@@ -1038,14 +1118,21 @@ $CBlack: #353a43;
     }
   }
 
-  @media all and (max-width: $iphone8) {
+  @media all and (max-width: 1025px) {
     .header {
       .container {
+        .header_iconMobile {
+          display: flex;
+          justify-content: space-around;
+
+          padding: 2em 1.5em;
+        }
         .header__top {
           display: none;
         }
 
         .header__mid {
+          padding: 0 1em 1em 1em;
           .mid__burgerMenu,
           .midNav {
             display: none;
@@ -1059,13 +1146,465 @@ $CBlack: #353a43;
     }
 
     .currentPath {
+      .container {
+        p {
+          padding-left: 1em;
+        }
+      }
+    }
+
+    .container {
+      .card {
+        .card__detail {
+          .cardImg {
+            padding: 1em 0;
+            height: 400px;
+
+            grid-template-rows: 1fr 1fr;
+            .cardImg_img {
+              img {
+                display: block;
+                width: 300px;
+              }
+            }
+
+            .cardImg__icon_favorite {
+              margin: 0;
+            }
+          }
+
+          .cardInformation {
+            .cardInformation__manufacturerAndInformation {
+              flex-direction: column;
+
+              .cardInformation__information {
+                padding: 1em 0;
+              }
+            }
+
+            .cardInformation__price {
+              width: 100%;
+            }
+
+            .cardInformation__colorTShirt {
+              width: 60%;
+            }
+          }
+        }
+      }
+
+      .TShirtRating {
+        .TShirtRating__title {
+          text-align: center;
+        }
+
+        .TShirtRating__row {
+          flex-direction: column;
+
+          .TShirtRating__colLeft {
+            width: 100%;
+          }
+
+          .TShirtRating__colRight {
+            padding: 0;
+            width: 100%;
+
+            .colRight__Accordance {
+              text-align: center;
+            }
+
+            .colRight__rowPercentages {
+              grid-template-areas: "malomerite more respond";
+
+              grid-template-rows: 100px;
+              justify-content: space-evenly;
+            }
+          }
+        }
+      }
+
+      .footer__content {
+        .content__col {
+          width: 50%;
+          &:nth-child(2),
+          &:first-child {
+            padding-bottom: 3em;
+          }
+
+          ul,
+          ol {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+
+          .socialNetwork {
+            justify-content: center;
+          }
+
+          &:last-child {
+            justify-content: space-around;
+
+            padding-bottom: 10em;
+          }
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 769px) {
+    .container {
+      .card {
+        .card__detail {
+          .cardImg {
+            width: 50%;
+
+            .cardImg_img {
+              img {
+                width: 100%;
+              }
+            }
+          }
+
+          .cardInformation {
+            width: 50%;
+            padding: 0 0 0 2em;
+
+            .cardInformation__rowImg {
+              img {
+                &:last-child {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .aboutTheProduct {
+        .aboutTheProduct__colRight {
+          .colRight__manual_img {
+            img {
+              width: 340px;
+            }
+          }
+        }
+      }
+
+      .similarProducts {
+        .similarProducts__header {
+          .similarProducts__title {
+            width: 60%;
+          }
+        }
+      }
+
+      .haveYouWatched {
+        .haveYouWatched__header {
+          .haveYouWatched__title {
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 577px) {
+    .header {
+      .container {
+        .header__mid {
+          .mid__logo {
+            padding: 0;
+          }
+
+          .mid__search {
+            filter: brightness(80%);
+            padding: 0 0 0 0.5em;
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .currentPath {
       display: none;
     }
 
     .container {
       .card {
         .card__detail {
+          .cardImg {
+            height: 300px;
+          }
+
+          .cardInformation {
+            .cardInformation__rowImg {
+              display: none;
+            }
+
+            .cardInformation__price {
+              flex-direction: column;
+            }
+
+            .cardInformation__colorTShirt {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .aboutTheProduct {
+        .aboutTheProduct__colRight {
+          .colRight__manual_img {
+            display: flex;
+            justify-content: center;
+            img {
+              width: 90%;
+            }
+          }
+        }
+      }
+
+      .similarProducts {
+        .similarProducts__header {
+          .similarProducts__title {
+            width: 100%;
+            text-align: center;
+          }
+
+          .similarProducts__btn,
+          .similarProducts__dropDown {
+            display: none;
+          }
+        }
+      }
+
+      .haveYouWatched {
+        .haveYouWatched__header {
+          .haveYouWatched__title {
+            width: 100%;
+            text-align: center;
+          }
+          .haveYouWatched__btn,
+          .haveYouWatched__dropDown {
+            display: none;
+          }
+        }
+      }
+
+      .reviews {
+        .reviews__textTitle {
+          grid-template-rows: repeat(2, 1fr);
+          grid-template-columns: 2fr 2fr 1fr;
+
+          .title {
+            text-align: center;
+            grid-column-start: 1;
+            grid-column-end: 4;
+          }
+
+          .total {
+            grid-row-start: 2;
+            grid-column-start: 1;
+          }
+
+          .text {
+            grid-row-start: 2;
+            grid-column-start: 2;
+            grid-column-end: 4;
+          }
+        }
+      }
+
+      .TShirtRating {
+        .TShirtRating__row {
+          .TShirtRating__colLeft {
+            flex-direction: column;
+
+            .colLeft__rating {
+              display: grid;
+              grid-template-areas:
+                "rating__rating rating__stars"
+                "rating__rating rating__reviews";
+
+              grid-template-columns: 1fr 1fr;
+              align-items: center;
+              justify-items: center;
+              text-align: center;
+
+              .rating__stars {
+                padding-bottom: 0.5em;
+
+                img {
+                  padding: 0 0.5em;
+                }
+              }
+
+              .rating__rating {
+                grid-row-start: 1;
+                grid-row-end: 3;
+              }
+
+              .rating__reviews {
+                grid-column-start: 2;
+              }
+            }
+
+            .colLeft__percentages {
+              width: 100%;
+
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+          }
+
+          .TShirtRating__colRight {
+            .colRight__rowPercentages {
+              grid-template-areas:
+                "malomerite"
+                "more "
+                "respond";
+            }
+
+            .respond,
+            .more,
+            .malomerite {
+              padding: 1em 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 415px) {
+    .container {
+      .card {
+        .updated {
+          display: none;
+        }
+
+        .cardMobile {
+          display: block;
+        }
+
+        .card__detail {
           flex-direction: column;
+
+          .cardImg {
+            padding-bottom: 0;
+            width: 100%;
+            .cardImg__icon_favorite {
+              display: none;
+            }
+
+            .pages {
+              display: flex;
+            }
+
+            margin-bottom: 2em;
+          }
+
+          .cardInformation {
+            width: 100%;
+            padding: 0;
+            .cardInformation__title,
+            .cardInformation__manufacturerAndInformation,
+            .cardInformation__rowImg {
+              display: none;
+            }
+
+            .cardInformation__sizes {
+              padding: 0.5em 0;
+            }
+            .cardInformation__btn {
+              width: 90%;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+
+      .aboutTheProduct {
+        flex-direction: column-reverse;
+        .aboutTheProduct__colLeft,
+        .aboutTheProduct__colRight {
+          width: 100%;
+        }
+        .aboutTheProduct__colRight {
+          .colRight__description,
+          .colRight__refund {
+            text-align: center;
+          }
+        }
+        .aboutTheProduct__colLeft {
+          padding-top: 1em;
+          .colLeft__title {
+            text-align: center;
+          }
+
+          .colLeft__colInformation {
+            flex-direction: column;
+            align-items: center;
+
+            ul {
+              text-align: center;
+            }
+          }
+
+          .colLeft__btnRollUp {
+            display: flex;
+          }
+        }
+      }
+
+      .reviews {
+        .reviews__user {
+          .user__information {
+            .user__name {
+              p {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 415px) {
+    .container {
+      .card {
+        .card__detail {
+          .cardImg {
+            height: 350px;
+
+            .cardImg_img {
+              img {
+                width: 200px;
+              }
+            }
+          }
+        }
+      }
+
+      .aboutTheProduct {
+        .aboutTheProduct__colRight {
+          .colRight__manual_img {
+            img {
+              width: 100%;
+            }
+          }
         }
       }
     }
